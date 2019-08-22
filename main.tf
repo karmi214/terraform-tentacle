@@ -19,7 +19,7 @@ data "template_file" "init" {
 }
 
 resource "aws_instance" "web" {
-  ami             = "ami-06a4e829b8bbad61e"
+  ami             = "${var.ami}"
   instance_type   = "t2.medium"
   user_data       = "${data.template_file.init.rendered}"
   key_name        = "${var.keypair}"

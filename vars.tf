@@ -10,3 +10,6 @@ variable "role" {
 }
 variable "keypair" {
 }
+variable "ami" {
+  
+}
