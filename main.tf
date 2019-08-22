@@ -24,6 +24,10 @@ resource "aws_instance" "web" {
   user_data       = "${data.template_file.init.rendered}"
   key_name        = "${var.keypair}"
   security_groups = ["${aws_security_group.rdp.name}"]
+  tags = {
+    Name        = "Octopus Instance"
+    Environment = "Test"
+  }
 }
 resource "aws_security_group" "rdp" {
   name        = "Octopusgroup"
@@ -55,9 +59,9 @@ resource "aws_security_group" "rdp" {
   }
 
   egress {
-    from_port       = 0
-    to_port         = 0
-    protocol        = "-1"
-    cidr_blocks     = ["0.0.0.0/0"]
+    from_port   = 0
+    to_port     = 0
+    protocol    = "-1"
+    cidr_blocks = ["0.0.0.0/0"]
   }
 }
