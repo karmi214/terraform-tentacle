@@ -1,0 +1,5 @@
+thumbprint  = "#{OCTOPUS_THUMBPRINT}"
+server_url  = "#{OCTOPUS_URL}"
+api_key     = "#{OCTOPUS_API}"
+environment = "#{environment}"
+role        = "#{role}"
