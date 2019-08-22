@@ -1,7 +1,7 @@
-provider "aws" {
-  profile = "educate"
-  region  = "us-east-1"
-}
+# provider "aws" {
+#   profile = "educate"
+#   region  = "us-east-1"
+# }
 
 data "template_file" "init" {
   template = "${file("init.tpl")}"
