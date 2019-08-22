@@ -8,4 +8,5 @@ variable "environment" {
 }
 variable "role" {
 }
-
+variable "keypair" {
+}
