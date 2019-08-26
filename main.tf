@@ -2,13 +2,9 @@ provider "aws" {
 }
 terraform {
   backend "s3" {
-    bucket = "auden-octopus-terraform-releasetour"
-    key    = "releasetour.tfstate"
-    region = "us-east-1"
   }
 }
 variable "bucket_name" {
-
 }
 
 resource "aws_s3_bucket" "b" {
